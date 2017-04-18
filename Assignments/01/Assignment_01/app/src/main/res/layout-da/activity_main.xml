@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="a201370518.sb.assignment_01.MainActivity"
-    tools:layout_editor_absoluteY="73dp"
+    tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
     <Button
@@ -15,6 +15,7 @@
         android:text="@string/btnEditProfile"
         tools:ignore="RtlHardcoded"
         tools:text="@string/btnEditProfile"
+        android:layout_marginEnd="6dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,74 +26,81 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/UserName"
-        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:ignore="MissingConstraints"
         tools:text="@string/UserName"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="51dp"
-        android:layout_marginLeft="81dp"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/txtUserID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/UserID"
-        tools:ignore="MissingConstraints,RtlHardcoded"
+        tools:ignore="MissingConstraints"
         tools:text="@string/UserID"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName"
         android:layout_marginLeft="0dp"
         app:layout_constraintLeft_toLeftOf="@+id/txtUserName"
-        android:layout_marginBottom="218dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserName"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/txtUserName" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="109dp"
         android:layout_height="wrap_content"
         android:text="@string/txtDeveloperStatus"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintTop_toBottomOf="@+id/txtUserID"
-        android:layout_marginLeft="0dp"
-        app:layout_constraintLeft_toLeftOf="@+id/txtUserID"
-        tools:ignore="RtlHardcoded" />
+        tools:ignore="RtlHardcoded"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.306" />
 
     <TextView
         android:id="@+id/stateDeveloperStatus"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/txtDeveloperStatusOff"
-        android:layout_marginTop="23dp"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserID"
+        android:layout_marginStart="17dp"
         app:layout_constraintLeft_toRightOf="@+id/textView"
-        android:layout_marginLeft="24dp"
-        tools:ignore="RtlHardcoded" />
+        android:layout_marginLeft="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        android:layout_marginBottom="0dp" />
 
     <ImageView
         android:id="@+id/imgPhoto"
-        android:layout_width="143dp"
-        android:layout_height="185dp"
-        android:layout_marginBottom="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
         android:contentDescription="@string/addPicture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/guideline"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher"
-        tools:layout_editor_absoluteY="52dp" />
+        app:srcCompat="@mipmap/ic_launcher" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.3" />
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="212dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="212dp"
+        tools:layout_editor_absoluteX="0dp" />
 
 </android.support.constraint.ConstraintLayout>

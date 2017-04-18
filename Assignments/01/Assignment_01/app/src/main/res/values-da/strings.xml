@@ -13,4 +13,5 @@
     <string name="btnCancel">Tilbage</string>
     <string name="txtDeveloperStatusOff">Ikke aktiveret</string>
     <string name="txtDeveloperStatusOn">Aktiveret</string>
+    <string name="addPicture">Tilføj billede</string>
 </resources>

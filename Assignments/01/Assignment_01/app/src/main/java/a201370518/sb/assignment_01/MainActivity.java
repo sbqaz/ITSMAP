@@ -12,6 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     public static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -81,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 String id = data.getStringExtra("user_id");
                 boolean developerStatus = data.getBooleanExtra("developer_status", false);
                 if (developerStatus == true){
-                    stateDeveloperStatus.setText("true"); // fix for dynamic binding
+                    stateDeveloperStatus.setText(R.string.txtDeveloperStatusOn);
                 } else{
-                    stateDeveloperStatus.setText("false"); // fix for dynamic binding
+                    stateDeveloperStatus.setText(R.string.txtDeveloperStatusOff);
                 }
                 txtUserName.setText(name);
                 txtUserID.setText(id);
@@ -113,6 +115,10 @@ public class MainActivity extends AppCompatActivity {
         final TextView id = (TextView) findViewById(R.id.txtUserID);
         CharSequence userid = id.getText();
         outState.putCharSequence("user_id", userid);
+
+        final TextView status = (TextView) findViewById(R.id.stateDeveloperStatus);
+        CharSequence devStatus = status.getText();
+        outState.putCharSequence("status", devStatus);
         super.onSaveInstanceState(outState);
     }
 
@@ -121,10 +127,13 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView name = (TextView) findViewById(R.id.txtUserName);
         final TextView id = (TextView) findViewById(R.id.txtUserID);
+        final TextView status = (TextView) findViewById(R.id.stateDeveloperStatus);
         CharSequence username = savedState.getCharSequence("user_name");
         CharSequence userid = savedState.getCharSequence("user_id");
+        CharSequence devStatus = savedState.getCharSequence("status");
         name.setText(username);
         id.setText(userid);
+        status.setText(devStatus);
         super.onRestoreInstanceState(savedState);
     }
 

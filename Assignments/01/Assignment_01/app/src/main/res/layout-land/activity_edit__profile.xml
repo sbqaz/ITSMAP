@@ -16,14 +16,16 @@
         android:inputType="textPersonName"
         android:text="@string/edtUserName"
         tools:ignore="MissingConstraints"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="30dp"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.106" />
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.089" />
 
     <EditText
         android:id="@+id/edtID"
@@ -37,7 +39,7 @@
         app:layout_constraintRight_toRightOf="parent"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintRight_creator="1"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@+id/edtUserName"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintHorizontal_bias="0.106" />

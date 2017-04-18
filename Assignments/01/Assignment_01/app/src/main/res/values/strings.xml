@@ -12,4 +12,5 @@
     <string name="btnCancel">Cancel</string>
     <string name="txtDeveloperStatusOff">No</string>
     <string name="txtDeveloperStatusOn">Yes</string>
+    <string name="addPicture">Take picture</string>
 </resources>
