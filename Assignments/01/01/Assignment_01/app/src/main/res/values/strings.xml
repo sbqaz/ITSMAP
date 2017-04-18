@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Assignment_01</string>
+    <string name="UserName">Fill in your name</string>
+    <string name="UserID">Fill in your ID</string>
+    <string name="txtDeveloperStatus">Developer status:</string>
+    <string name="btnEditProfile">Edit Profile</string>
+    <string name="photo_thumbnail">default</string>
+    <string name="edtUserName">John</string>
+    <string name="edtID">1234</string>
+    <string name="edtDeveloperStatus">Is developer status activated?</string>
+    <string name="btnSubmit">Submit</string>
+    <string name="btnCancel">Cancel</string>
+    <string name="txtDeveloperStatusOff">No</string>
+    <string name="txtDeveloperStatusOn">Yes</string>
+</resources>

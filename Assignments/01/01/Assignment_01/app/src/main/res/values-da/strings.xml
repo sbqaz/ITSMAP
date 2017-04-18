@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Øvelse_01</string>
+    <string name="UserName">Opdater din profil</string>
+    <string name="UserID">Opdater din profil</string>
+    <string name="txtDeveloperStatus">Udvikler status:</string>
+    <string name="btnEditProfile">Rediger profil</string>
+    <string name="photo_thumbnail">default</string>
+    <string name="edtUserName">Udfyld med navn</string>
+    <string name="edtID">Udfyld med ID nr</string>
+    <string name="edtDeveloperStatus">Er udvikler status aktiveret?</string>
+    <string name="btnSubmit">Opdater</string>
+    <string name="btnCancel">Tilbage</string>
+    <string name="txtDeveloperStatusOff">Ikke aktiveret</string>
+    <string name="txtDeveloperStatusOn">Aktiveret</string>
+</resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="a201370518.sb.assignment_01.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnEditProfile"
+        tools:ignore="RtlHardcoded"
+        tools:text="@string/btnEditProfile"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/UserName"
+        tools:ignore="MissingConstraints"
+        tools:text="@string/UserName"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.203" />
+
+    <TextView
+        android:id="@+id/txtUserID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/UserID"
+        tools:ignore="MissingConstraints"
+        tools:text="@string/UserID"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserName"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/txtUserName"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/txtUserName" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txtDeveloperStatus"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserID"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/txtUserID"
+        android:layout_marginRight="0dp"
+        app:layout_constraintRight_toRightOf="@+id/txtUserID" />
+
+    <TextView
+        android:id="@+id/stateDeveloperStatus"
+        android:layout_width="34dp"
+        android:layout_height="17dp"
+        android:text="@string/txtDeveloperStatusOff"
+        android:layout_marginStart="17dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginLeft="17dp"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.387" />
+
+    <ImageView
+        android:id="@+id/imgPhoto"
+        android:layout_width="133dp"
+        android:layout_height="192dp"
+        app:srcCompat="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="212dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="212dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+</android.support.constraint.ConstraintLayout>
