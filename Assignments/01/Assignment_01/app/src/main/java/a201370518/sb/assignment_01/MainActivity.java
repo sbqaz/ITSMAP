@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     TextView txtUserName;
     TextView txtUserID;
     TextView stateDeveloperStatus;
+    boolean developerStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             if (data != null){
                 String name = data.getStringExtra("user_name");
                 String id = data.getStringExtra("user_id");
-                boolean developerStatus = data.getBooleanExtra("developer_status", false);
+                developerStatus = data.getBooleanExtra("developer_status", false);
                 if (developerStatus == true){
                     stateDeveloperStatus.setText(R.string.txtDeveloperStatusOn);
                 } else{
@@ -98,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intentStartActivityEditProfile = new Intent(this, Edit_Profile.class);
         intentStartActivityEditProfile.putExtra("user_name", txtUserName.getText().toString());
         intentStartActivityEditProfile.putExtra("user_id", txtUserID.getText().toString());
+
+        if (developerStatus == true){
+            intentStartActivityEditProfile.putExtra("developer_status", true);
+        } else{
+            intentStartActivityEditProfile.putExtra("developer_status", false);
+        }
 
         startActivityForResult(intentStartActivityEditProfile, REQUEST_EDIT_PROFILE);
     }
@@ -119,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
         final TextView status = (TextView) findViewById(R.id.stateDeveloperStatus);
         CharSequence devStatus = status.getText();
         outState.putCharSequence("status", devStatus);
+
+        final Boolean switchStatus = developerStatus;
+        outState.putBoolean("switchStatus", switchStatus);
         super.onSaveInstanceState(outState);
     }
 
@@ -128,9 +138,11 @@ public class MainActivity extends AppCompatActivity {
         final TextView name = (TextView) findViewById(R.id.txtUserName);
         final TextView id = (TextView) findViewById(R.id.txtUserID);
         final TextView status = (TextView) findViewById(R.id.stateDeveloperStatus);
+        final Boolean switchStatus = developerStatus;
         CharSequence username = savedState.getCharSequence("user_name");
         CharSequence userid = savedState.getCharSequence("user_id");
         CharSequence devStatus = savedState.getCharSequence("status");
+        developerStatus = savedState.getBoolean("switchStatus", switchStatus);
         name.setText(username);
         id.setText(userid);
         status.setText(devStatus);

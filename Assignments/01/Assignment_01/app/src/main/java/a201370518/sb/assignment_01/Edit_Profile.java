@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Switch;
 
 public class Edit_Profile extends AppCompatActivity {
 
@@ -15,7 +16,8 @@ public class Edit_Profile extends AppCompatActivity {
     Button btnSubmit;
     EditText edtUserName;
     EditText edtID;
-    CheckBox chkBoxYes;
+    Switch switch1;
+    boolean devStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,11 @@ public class Edit_Profile extends AppCompatActivity {
             edtID.setText(id);
         }
 
-        chkBoxYes = (CheckBox) findViewById(R.id.chkBoxYes);
-        chkBoxYes.isChecked();
+        switch1 = (Switch) findViewById(R.id.switch1);
+        devStatus = fromMainActivity.getBooleanExtra("developer_status", false);
+        if (devStatus == true){
+            switch1.setChecked(true);
+        }
 
         btnCancel = (Button) findViewById(R.id.btnCancel);
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +72,7 @@ public class Edit_Profile extends AppCompatActivity {
         data.putExtra("user_name", name);
         data.putExtra("user_id", id);
 
-        if (chkBoxYes.isChecked()){
+        if (switch1.isChecked()){
             data.putExtra("developer_status", true);
         }
 
