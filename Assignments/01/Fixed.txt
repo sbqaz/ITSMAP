@@ -1,0 +1,5 @@
+Fixed:
+
+Replaced check btns with switch btn, which now persist status across activities.
+
+The "missing icon" is not missing. It its being used as a placeholder for the picture in the app.
